@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Universal selector*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*css variable*/
+:root{
+    --primary:#727272;
+    --secondary:#FF900E;
+    --dark:#424242;
+    --black:#131313;
+    --white:#FFFFFF;
+}
+/*common style*/
+body{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.content-area{
+    width: 75%;
+    margin: 0 auto;
+}
+.section_title{
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.sub_title{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.description_text{
+    line-height: 26px;
+    color:var(--primary);
+}
+/*-----------------------
+Header Section Style
+------------------------*/
+header{
+    background-color: rgba(255, 144, 14, 0.1);
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+.nav h2{
+    margin-bottom: 0!important;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:50px;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color:#424242;
+}
+/*-----------------------
+Banner Section Style
+------------------------*/
+.banner{
+    margin-top: 80px;
+    padding-bottom: 45px;
+}
+.banner-description{
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.banner-description p{
+    margin-bottom: 32px;
+}
+.main_title{
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.primary_btn{
+    background: var(--secondary);
+    padding: 20px 25px;
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+}
+.banner-img img{
+    width: 100%;
+}
+/*-----------------------
+Banner Section Style
+------------------------*/
+.features-1 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 70px;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 130px;
+}
+.features-1>div{
+    flex:1;
+}
+.feature-item-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding-left: 5%;
+}
+.feature-item-container>.feature-item{
+    width: 100%;
+}
+.feature-item img{
+    width: 100%;
+}

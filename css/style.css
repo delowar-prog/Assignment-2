@@ -1,95 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*Universal selector*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /*css variable*/
-:root{
-    --primary:#727272;
-    --secondary:#FF900E;
-    --dark:#424242;
-    --black:#131313;
-    --white:#FFFFFF;
+:root {
+    --primary: #727272;
+    --secondary: #FF900E;
+    --dark: #424242;
+    --black: #131313;
+    --white: #FFFFFF;
 }
+
 /*common style*/
-body{
+body {
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
-.content-area{
+
+.content-area {
     width: 75%;
     margin: 0 auto;
 }
-.section_title{
+
+.section_title {
     font-size: 45px;
     font-weight: 700;
     margin-bottom: 24px;
 }
-.sub_title{
+
+.sub_title {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.description_text{
+
+.description_text {
     line-height: 26px;
-    color:var(--primary);
+    color: var(--primary);
 }
+
 /*-----------------------
 Header Section Style
 ------------------------*/
-header{
+header, footer {
     background-color: rgba(255, 144, 14, 0.1);
 }
-.nav{
+
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 50px;
 }
-.nav h2{
-    margin-bottom: 0!important;
+
+.nav h2 {
+    margin-bottom: 0 !important;
 }
-.nav ul{
+
+.nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap:50px;
+    gap: 50px;
 }
-.nav ul li{
+
+.nav ul li {
     list-style: none;
 }
-.nav ul li a{
+
+.nav ul li a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
-    color:#424242;
+    color: #424242;
 }
+
 /*-----------------------
 Banner Section Style
 ------------------------*/
-.banner{
+.banner {
     margin-top: 80px;
     padding-bottom: 45px;
 }
-.banner-description{
+
+.banner-description {
     width: 45%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 32px;
 }
-.banner-description p{
+
+.banner-description p {
     margin-bottom: 32px;
 }
-.main_title{
+
+.main_title {
     font-size: 55px;
     font-weight: 700;
     margin-bottom: 32px;
 }
-.primary_btn{
+
+.primary_btn {
     background: var(--secondary);
     padding: 20px 25px;
     border: none;
@@ -98,11 +115,13 @@ Banner Section Style
     font-size: 20px;
     font-weight: 600;
 }
-.banner-img img{
+
+.banner-img img {
     width: 100%;
 }
+
 /*-----------------------
-Banner Section Style
+features-1 Section Style
 ------------------------*/
 .features-1 {
     display: flex;
@@ -112,18 +131,172 @@ Banner Section Style
     margin-top: 80px;
     margin-bottom: 130px;
 }
-.features-1>div{
-    flex:1;
+
+.features-1>div {
+    flex: 1;
 }
+
 .feature-item-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding-left: 5%;
 }
-.feature-item-container>.feature-item{
+
+.feature-item-container>.feature-item {
     width: 100%;
 }
-.feature-item img{
+
+.feature-item img {
     width: 100%;
+}
+
+/*-----------------------
+features-2 Section Style
+------------------------*/
+.features-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 55px;
+    align-items: center;
+    margin-bottom: 130px;
+}
+
+.features-2-description {
+    flex: 0.8;
+}
+
+.features-2-description h2 {
+    border-left: 5px solid var(--secondary);
+    line-height: 45px;
+    padding-left: 10px;
+}
+
+.features-2-description>div {
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.features-2-image {
+    flex: 1;
+    position: relative;
+}
+
+.features-2-image img {
+    width: 100%;
+}
+
+.exparience {
+    position: absolute;
+    bottom: -75px;
+    left: -45px;
+    background-color: var(--secondary);
+    padding: 45px 42px;
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.exparience>h1 {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.exparience>p {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/*-----------------------
+Some facts Section Style
+------------------------*/
+
+.facts-header{
+    width: 45%;
+}
+.facts-item-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 170px;
+}
+.facts-item{
+    padding: 45px 35px 60px;
+    border: 1px solid var(--secondary);
+    border-radius: 10px;
+    text-align: center;
+}
+.facts-item>i{
+    font-size:40px;
+}
+.facts-item>h1{
+    font-size: 45px;
+    margin: 10px 0;
+    color:var(--dark);
+}
+.facts-item>p{
+    font-size: 20px;
+    font-weight: 600;
+    color:var(--dark);
+}
+
+/*-----------------------
+sponsors Section Style
+------------------------*/
+
+.sponsors{
+ margin-bottom: 130px;   
+}
+.sponsors-header{
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.sponsors-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10%;
+}
+.sponsors-item{
+    flex:1;
+}
+.sponsors-item img{
+    width: 100%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.sponsors-item img:hover{
+    filter: grayscale(0%);
+}
+
+/*-----------------------
+Footer Section Style
+------------------------*/
+
+footer{
+    padding: 40px;
+    text-align: center;
+    color:var(--dark);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/*-----------------------
+Responsive Design Style
+------------------------*/
+.hide{display: none;}
+@media only screen and (max-width: 768px) {
+    nav{flex-direction: column; gap: 30px;}
+    nav ul, .features-1,.features-2{ flex-direction: column;}
+    .nav ul li a {font-size: 24px;}
+    .main_title {font-size: 32px;}
+    .feature-item-container {grid-template-columns: repeat(1, 1fr);}
+    .exparience {padding: 20px 15px;}
+    .facts-header {width: 70%;margin: 0 auto;text-align: center;}
+    .facts-item-container, .sponsors-container {flex-direction: column; gap:30px;}
+    .sponsors-header {width: 70%;}
 }

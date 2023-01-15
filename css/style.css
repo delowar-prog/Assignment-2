@@ -79,8 +79,11 @@ header, footer {
     font-size: 18px;
     font-weight: 500;
     color: #424242;
+    transition: color 0.4s;
 }
-
+.nav ul li a:hover {
+    color:var(--secondary);
+}
 /*-----------------------
 Banner Section Style
 ------------------------*/
@@ -107,15 +110,20 @@ Banner Section Style
 }
 
 .primary_btn {
+    cursor: pointer;
+    border:1px solid var(--secondary);
     background: var(--secondary);
     padding: 20px 25px;
-    border: none;
     border-radius: 10px;
     color: var(--white);
     font-size: 20px;
     font-weight: 600;
+    transition: background-color 0.5s ease-in;
 }
-
+.primary_btn:hover{
+    background-color: #FFFFFF;
+    color: var(--secondary);
+}
 .banner-img img {
     width: 100%;
 }
@@ -226,6 +234,12 @@ Some facts Section Style
     border: 1px solid var(--secondary);
     border-radius: 10px;
     text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.facts-item:hover {
+transform: translateY(-10px);
+background-color: #ddd;
 }
 .facts-item>i{
     font-size:40px;
@@ -271,8 +285,69 @@ sponsors Section Style
 }
 .sponsors-item img:hover{
     filter: grayscale(0%);
+    transform: scale(1.2);
 }
-
+/*-----------------------
+Contact Section Style
+------------------------*/
+.contact{
+    background-image: linear-gradient(30deg, #181F4B,hsl(231, 37%, 34%), #181F4B);
+    padding: 3% 8%;
+    display: flex;
+    justify-content: space-between;
+    gap:15%;
+    color:var(--secondary);
+    border-radius: 10px;
+}
+.contact>div{
+flex: 1;
+}
+.contact-form>h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+label{
+    color:var(--white);
+    font-size: 16px;
+}
+input[type="text"], textarea{
+    padding: 15px;
+    width: 100%;
+    background-color: #4F5C88;
+    border:none;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color:#fff;
+    font-size: 16px;
+}
+input[type="submit"]{
+    padding: 15px 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color:var(--white);
+    background-color:var(--secondary);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: #FFFFFF;
+    color: var(--secondary);
+}
+.contact-address h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.contact-address p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.contact-address ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
 /*-----------------------
 Footer Section Style
 ------------------------*/
@@ -288,15 +363,32 @@ footer{
 /*-----------------------
 Responsive Design Style
 ------------------------*/
-.hide{display: none;}
+
+
+/*-----------------------
+For Mobile Screen
+------------------------*/
 @media only screen and (max-width: 768px) {
-    nav{flex-direction: column; gap: 30px;}
+    nav, .facts-item-container, .sponsors-container, .contact{flex-direction: column; gap: 30px;}
     nav ul, .features-1,.features-2{ flex-direction: column;}
     .nav ul li a {font-size: 24px;}
     .main_title {font-size: 32px;}
     .feature-item-container {grid-template-columns: repeat(1, 1fr);}
     .exparience {padding: 20px 15px;}
     .facts-header {width: 70%;margin: 0 auto;text-align: center;}
-    .facts-item-container, .sponsors-container {flex-direction: column; gap:30px;}
     .sponsors-header {width: 70%;}
+}
+
+/*-----------------------
+For Tablate Screen
+------------------------*/
+@media only screen and (min-width: 769px) and (max-width:1024px) {
+    nav{flex-direction: column; gap: 30px;}
+    .features-1,.features-2{ flex-direction: column;}
+    .exparience {left: 170px;}
+    .facts-header {width: 70%;margin: 0 auto;text-align: center;}
+    .facts-item-container, .sponsors-container {display: grid; grid-template-columns: repeat(2, 1fr); grid-gap:20px;}
+    .sponsors-container {display: grid; grid-template-columns: repeat(2, 1fr); grid-gap:50px;}
+    .sponsors-item img {width: 70%;}
+    .contact{flex-direction: column; gap: 30px;}
 }
